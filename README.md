@@ -27,4 +27,16 @@ Example:
 
 ```
 
+The syntax of running linear scan is as follows:
+
+```
+./linscan <input file> <output file> -N #points -B #bits -Q #queries -K #NN
+
+```
+Example:
+
+```
+./linscan <input file> <output file> -N 1000000 -B 64 -Q 100 -K 1
+```
+
 [1] Fast Exact Search in Hamming Space with Multi-Index Hashing, M. Norouzi, A. Punjani, D. J. Fleet, IEEE TPAMI 2014
