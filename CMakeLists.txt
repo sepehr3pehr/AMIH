@@ -4,7 +4,6 @@ project (amih)
 find_library (HDF5_LIB hdf5)
 
 set (CMAKE_CXX_FLAGS "-DSINGLE_CORE -O2 -fopenmp -DNDEBUG")
-# -Wall -march=native -mtune=native")
 
 include_directories ("${PROJECT_SOURCE_DIR}/include")
 include_directories("/usr/include/hdf5/serial/")
