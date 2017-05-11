@@ -212,26 +212,11 @@ int main (int argc, char**argv) {
 	double ct = (double)(end0-start0) / (CLOCKS_PER_SEC);
 	double wt = (double)(end1-start1);
 
-		ofstream resfile2;
-	std::ostringstream a;
-		a<<B;
-		std::string str = a.str();
-		std::string ns2 = "indexingtime" + str + ".txt";
-		resfile2.open(ns2.c_str(), ios::out | ios::app);
-		
-		resfile2 <<m<<", "<<N<< ",  "<<result.cput<<",  "<<result.vm<<", "<<ct<< "\n";
 
 
 	printf("done. | cpu %.0fm%6.4fs | wall %.0fm%6.4fs\n", ct/60, ct-60*int(ct/60), wt/60, wt-60*int(wt/60));
-	ofstream resfile;
-	std::ostringstream t;
-	t<<B;
-		std::string str2 = t.str();
-		std::string ns = "res2mih" + str2 + ".txt";
-		resfile.open(ns.c_str(), ios::out | ios::app);
 
-
-		MIH->setK(K);
+	MIH->setK(K);
 
 	printf("query... ");
 	fflush (stdout); int max = 0;
@@ -249,12 +234,6 @@ int main (int argc, char**argv) {
 		result.vm  /= double(1024*1024);
 		result.rss /= double(1024*1024);
 	  
-	  
-
-
-	resfile.close();
-
-
 	printf("done | cpu %.3fs | wall %.3fs | VM %.3fgb | RSS %.3fgb     \n", result.cput, result.wt, result.vm, result.rss);
 
 	double *pstats_d = result.stats[0];
