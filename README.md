@@ -1,5 +1,5 @@
 # Angular Multi-Index Hashing (AMIH)
-This is an implementation of the Angular Mutli-Index Hashing which performs exact angular *K* nearest neighbors in the binary space. It is built on top of multi-index hashing proposed in [1] [(mih)](https://github.com/norouzi/mih)
+This is an implementation of the Angular Mutli-Index Hashing which performs exact angular *K* nearest neighbors in the binary space. It is built on top of multi-index hashing proposed in [1] [(mih)](https://github.com/norouzi/mih).
 ## Build Instructions
 The requirments of building the project are, *cmake, make, hdf5 lib* and *hdf5-dev*. To build it, run:
 
